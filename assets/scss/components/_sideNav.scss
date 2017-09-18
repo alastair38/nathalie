@@ -1,8 +1,8 @@
 .side-nav {
   position: fixed;
   width: 240px;
-  left: -105%;
   top: 0;
+  left: 0;
   margin: 0;
   height: 100%;
   height: calc(100% + 60px);
@@ -11,6 +11,7 @@
   background-color: $sidenav-bg-color;
   z-index: 999;
   overflow-y: auto;
+  transform: translateX(-100%);
 
   @extend .z-depth-1;
   will-change: left;

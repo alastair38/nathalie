@@ -44,29 +44,29 @@ function create_pages(){
         update_post_meta($postID, "_wp_page_template", "page.php");
         update_option("privacy_page_id", $postID);
     }
-    $blog_page_id = get_option("blog_page_id");
-    if (!$blog_page_id) {
-        //create a new page and automatically assign the page template
-        $post1 = array(
-            'post_title' => "Blog",
-            'post_content' => "",
-            'post_status' => "publish",
-            'post_type' => 'page',
-        );
-        $postID = wp_insert_post($post1, $error);
-        update_post_meta($postID, "_wp_page_template", "archive.php");
-        update_option("blog_page_id", $postID);
-    }
+    // $blog_page_id = get_option("blog_page_id");
+    // if (!$blog_page_id) {
+    //     //create a new page and automatically assign the page template
+    //     $post1 = array(
+    //         'post_title' => "Blog",
+    //         'post_content' => "",
+    //         'post_status' => "publish",
+    //         'post_type' => 'page',
+    //     );
+    //     $postID = wp_insert_post($post1, $error);
+    //     update_post_meta($postID, "_wp_page_template", "archive.php");
+    //     update_option("blog_page_id", $postID);
+    // }
 }
 
 // Sets 'Home' as the static front page
-$home = get_page_by_title( 'Home' );
-update_option( 'page_on_front', $home->ID );
-update_option( 'show_on_front', 'page' );
+// $home = get_page_by_title( 'Home' );
+// update_option( 'page_on_front', $home->ID );
+// update_option( 'show_on_front', 'page' );
 
-// Sets 'Blog' as the blog page
-$blog   = get_page_by_title( 'Blog' );
-update_option( 'page_for_posts', $blog->ID );
+// // Sets 'Blog' as the blog page
+// $blog   = get_page_by_title( 'Blog' );
+// update_option( 'page_for_posts', $blog->ID );
 
 /*********************
 CREATE MENU ITEMS FROM SETUP PAGES AND ASSIGN THESE AS MAIN-NAV

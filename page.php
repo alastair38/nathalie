@@ -3,17 +3,14 @@ get_header(); ?>
 
 
 
-	<main class="container">
+	<main class="conainer">
 			<div class="row" role="main">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<?php
-				  $children = get_pages('title_li=&child_of='.$post->ID.'&echo=0');
-				  if ($children) {
-							get_template_part( 'parts/loop', 'page-about' );
-					} else {
-						get_template_part( 'parts/loop', 'page' );
-					}
+
+							get_template_part( 'parts/loop', 'page' );
+
 					?>
 
 					<?php //get_template_part( 'parts/loop', 'page-about' ); ?>

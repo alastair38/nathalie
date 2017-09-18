@@ -35,8 +35,13 @@
 	</head>
 
 	<!-- Uncomment this line if using the Off-Canvas Menu -->
+<?php if (is_front_page()) {
+  ?>
+  <body <?php body_class('white'); ?> style="background: url('<?php the_post_thumbnail_url('full'); ?>') no-repeat center center; background-size: cover; background-attachment: fixed;">
+<?php } else {?>
+  <body <?php body_class('white'); ?>>
+<?php }?>
 
-	<body <?php body_class(); ?>>
 
 					<header class="header navbar-fixed valign-wrapper" role="banner">
 

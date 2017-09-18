@@ -133,6 +133,13 @@ a, a:visited {
 	}
 }
 
+.share-links a i.mdi {
+  color: color("teal", "base");
+  &:hover, &:focus {
+    color: $off-black;
+  }
+}
+
 ul.share-links.columns li {
   display: inline;
   padding: 0em 1em;
@@ -156,27 +163,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-weight: 200;
+	font-weight: 300;
   font-size: $h3-fontsize;
 	@media #{$medium-and-down} {
     font-size: 2.25rem;
   }
   @media #{$small-and-down} {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 300;
   }
 }
 
-.home h1 {
-  font-size: 3em;
-  font-weight: 300;
-  @media #{$small-and-down} {
-    font-size: 3em;
-  }
-}
 
 h2, .h2 {
-	font-weight: 200;
+	font-weight: 100;
 	@media #{$medium-and-down} {
     font-size: 2rem;
   }
@@ -188,30 +188,45 @@ h2, .h2 {
 
 .archive h2 {
   font-size: $h4-fontsize;
-  font-weight: 300;
+  font-weight: 100;
   @media #{$small-and-down} {
     font-size: $h5-fontsize;
   }
 }
 
 h3, .h3 {
-	font-weight: 300;
-	@media #{$medium-and-down} {
-    font-size: 1.75rem;
-  }
-}
-
-h4, .h4 {
-	font-weight: 300;
+	font-weight: 100;
 	@media #{$medium-and-down} {
     font-size: 1.5rem;
   }
 }
 
+h4, .h4 {
+	font-weight: 100;
+	@media #{$medium-and-down} {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
 h5, .h5 {
-	font-weight: 300;
+	font-weight: 100;
 	@media #{$medium-and-down} {
     font-size: 1.25rem;
+  }
+}
+
+.home {
+  h1 {
+    font-size: 4.5rem;
+    @media #{$small-and-down} {
+      font-size: 2em;
+    }
+  }
+  h3 {
+    @media #{$small-and-down} {
+      font-size: 1.25em;
+    }
   }
 }
 
@@ -219,14 +234,24 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
+  a.brand-logo.thin.left {
+    color: $secondary-color;
+    font-weight: 300;
+    padding-left: 1rem;
+    &:hover, &:focus {
+      color: color("grey", "darken-4");
+    }
+  }
   #logo {
     vertical-align: middle;
     margin-right: .5rem;
     height: 40px;
+    margin-top: 12px;
     width: auto;
     animation: show 1000ms 1;
     @media #{$small-and-down} {
-    	height: 25px;
+    	height: 24px;
+      margin-top: 15px;
   	}
   }
   .brand-logo {
@@ -235,8 +260,9 @@ HEADER STYLES
     	font-size: 1.25rem;
   	}
   }
+
 }
-;
+
 .lean-overlay {
   height: 0;
 }
@@ -316,6 +342,10 @@ ACF FORM OVERRIDES
 }
 }
 
+form ul {
+  padding: 2rem 0;
+}
+
 .acf-label label {
   text-transform: uppercase;
   color: color("grey", "darken-3");
@@ -357,7 +387,56 @@ POSTS & CONTENT STYLES
 .home .container {
   article {
   }
+}
 
+.page p, .single-post p, .blog p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.contact .container {
+    padding: 4rem;
+}
+
+.mdi-information-outline {
+    font-size: 1.35rem !important;
+    &:before {
+      padding-left: 5px !important;
+    }
+}
+
+#cancellation_alert {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+#About, #Teaching, #Classes {
+  margin-bottom: 0px !important;
+  padding: 2rem 0;
+  opacity: 0;
+  p {
+    font-size: 1.85rem;
+    font-weight: 200;
+    @media #{$small-and-down} {
+      font-size: 1.25em;
+    }
+
+  }
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 2.28rem;
+  }
+  .btn-large {
+    margin-top: 2rem;
+    border-width: 1px;
+    border-style: solid;
+  }
 }
 
 .hexagon {
@@ -450,13 +529,12 @@ color: color("grey", "base");
 }
 
 body.home {
-  background: color("grey", "lighten-4");
-  @media #{$medium-and-up} {
-  background: url('../images/frontpage.jpg') no-repeat;
+
+  background: url('../images/dancing_BG.jpg') no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  }
+
 }
 
 .home #bottom {
@@ -474,6 +552,12 @@ article section {
   }
 }
 
+.teacher .col.s12 {
+  padding: 2rem;
+  img {
+    width: 200px;
+  }
+}
 .single-title,
 .page-title {
 
@@ -577,9 +661,9 @@ h6.card-sub-title {
 }
 
 #gettingStarted {
-  padding: 5em 1em 3em 1em;
+  padding: 5em 0em 0em 0em;
   margin-bottom: 0;
-  background: rgba(38,38,38,.85);
+  background: rgba(38,38,38,.65);
   aside {
     padding: 1em 2em;
   }
@@ -605,9 +689,9 @@ h6.card-sub-title {
   }
 }
 
-#about-pathways, #your-say {
+#about-the-academy, #teaching, #classes {
   opacity: 0;
-  padding: 2em 0em;
+  padding: 3em 0em;
   margin-bottom: 0;
   aside {
     padding: 1em 2em;
@@ -691,9 +775,9 @@ h6.card-sub-title {
 
 }
 
-.home .entry-content {
-  font-size: 4rem;
+.home .article-header {
   font-weight: 100;
+  padding: 3rem 0;
 }
 
 img.hide-on-med-and-up {
@@ -720,7 +804,29 @@ img.hide-on-med-and-up {
 }
 
 .parallax-container {
-  height: 250px;
+  height: 400px;
+  margin-bottom: 2rem;
+  background: rgba(0,0,0, .5);
+  h1 {
+    padding: 8rem 0 4rem 0;
+  }
+  @media #{$medium-and-down} {
+    height: 300px;
+  }
+}
+
+.page-template-page-about {
+  h1 {
+    position: absolute;
+    width: 100%;
+    padding: 8rem 0 4rem 0;
+
+  }
+}
+
+.chip {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
 }
 /*********************
 IMAGE GALLERY STYLES
@@ -1133,8 +1239,6 @@ FOOTER STYLES
 }
 
 .page-footer {
-  background: $footer-bg-color;
-  @extend .white-text;
   font-weight: 300;
   ul {
     font-size: 0; // this removes white space between li children for application of side borders. Margin needs to reapplied hence...
@@ -1149,7 +1253,7 @@ FOOTER STYLES
       padding: 5px 0;
     }
     a {
-      @extend .white-text;
+      @extend .black-text;
       .mdi {
         border-radius: 50%;
         width: 1.75em;
@@ -1159,7 +1263,6 @@ FOOTER STYLES
       &:hover, &:focus {
         .mdi {
           @extend .white;
-          color: $footer-bg-color;
         }
       }
     }
@@ -1185,14 +1288,16 @@ FOOTER STYLES
         height: 12px;
     }
     a {
-      @extend .white-text;
-      border-bottom: 1px dotted;
+      color: color('teal', 'base');
+      &:hover, &:focus {
+        color: color('teal', 'darken-4');
+      }
     }
   }
 }
 
 .home footer {
-  background: rgba(38,38,38,.85);
+  background: rgba(38,38,38,1);
 }
 
 /*********************

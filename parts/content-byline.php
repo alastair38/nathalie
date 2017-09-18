@@ -1,16 +1,7 @@
 
 
-	<div id="byline" class="grey-text">
-			<i class="mdi mdi-clock"></i> Posted on <?php the_time('F j, Y');
-			$authors = get_field('authors');
-			if ($authors){
-				echo ' - <i class="mdi mdi-account-multiple tooltipped" data-position="below" data-delay="50" data-tooltip="This resource was posted by the following"></i> ';
-			}
-			foreach ($authors as $author){
-				$fn =  $author['user_firstname'];
-				$ln = $author['user_lastname'];
-				echo '<span><a href="/mfn/profile/' . strtolower($fn) . '-' . strtolower($ln) . '">' . $fn . ' ' . $ln . ', </a></span>';
-			}?>
+	<div class="center white-text">
+			<i class="mdi mdi-clock"></i> Posted on <?php the_time('F j, Y');?>
 
 	</div>
 

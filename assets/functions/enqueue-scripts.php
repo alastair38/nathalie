@@ -12,8 +12,13 @@ function site_scripts() {
     //wp_enqueue_script( 'what-input', get_template_directory_uri() . '/vendor/what-input/what-input.min.js', array(), '', true );
 
     // Adding Materialize scripts file in the footer
-  wp_enqueue_script( 'materialize-js', get_template_directory_uri() . '/assets/js/bin/materialize.js', array( 'jquery' ), '', true );
+  wp_enqueue_script( 'materialize-js', 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js', array( 'jquery' ), '', true );
 
+    // Adding Slick slider script
+  if(is_single()){
+  wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', array(), '', true );
+  wp_enqueue_script( 'slick-init', get_template_directory_uri() . '/assets/js/slick_init.js', array( 'jquery' ), '', true );
+}
     // Adding Cookie Consent scripts file in the footer
 
     wp_enqueue_script( 'cookie-js', 'https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js', array(), '', true );
@@ -21,7 +26,13 @@ function site_scripts() {
     // Adding scripts file in the footer
     wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), '', true );
 
-    // Register main stylesheet
+    // Register Slick stylesheet
+    if(is_single()){
+      wp_enqueue_style( 'slick-css', 'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', array(), '', 'all' );
+
+      wp_enqueue_style( 'icons-css', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
+    }
+
 
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
