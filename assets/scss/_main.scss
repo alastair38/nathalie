@@ -538,7 +538,7 @@ color: color("grey", "base");
 body.home {
   background-size: cover !important;
   @media #{$small-and-down} {
-    background-size: 500px 275px !important;
+    background-size: 1000px 501px !important;
   }
 
 }

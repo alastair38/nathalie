@@ -10988,7 +10988,7 @@ body.home {
   background-size: cover !important; }
   @media only screen and (max-width: 600px) {
     body.home {
-      background-size: 500px 275px !important; } }
+      background-size: 1000px 501px !important; } }
 
 .home #bottom {
   margin-bottom: 0px; }
