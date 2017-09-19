@@ -689,9 +689,18 @@ h6.card-sub-title {
   opacity: 0;
 }
 
+body.home {
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  @media #{$small-and-down} {
+    background-size: 350% auto !important;
+    background-attachment: scroll !important;
+  }
+}
+
 #gettingStarted {
   padding: 5em 0em 0em 0em;
-  margin-bottom: 0;
+  margin-bottom: 0em;
   background: rgba(38,38,38,.65);
   aside {
     padding: 1em 2em;

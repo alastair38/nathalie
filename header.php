@@ -37,7 +37,7 @@
 	<!-- Uncomment this line if using the Off-Canvas Menu -->
 <?php if (is_front_page()) {
   ?>
-  <body <?php body_class(''); ?> style="background: url('<?php the_post_thumbnail_url('full'); ?>') rgba(38,38,38,.65) no-repeat center top; background-size: cover; background-attachment: fixed;">
+  <body <?php body_class(''); ?> style="background: url('<?php the_post_thumbnail_url('full'); ?>') rgba(38,38,38,.65) no-repeat center top;">
 <?php } else {?>
   <body <?php body_class('white'); ?>>
 <?php }?>

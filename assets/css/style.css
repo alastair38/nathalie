@@ -11068,9 +11068,17 @@ h6.card-sub-title {
 .fixed-action-btn {
   opacity: 0; }
 
+body.home {
+  background-size: cover !important;
+  background-attachment: fixed !important; }
+  @media only screen and (max-width: 600px) {
+    body.home {
+      background-size: 350% auto !important;
+      background-attachment: scroll !important; } }
+
 #gettingStarted {
   padding: 5em 0em 0em 0em;
-  margin-bottom: 0;
+  margin-bottom: 0em;
   background: rgba(38, 38, 38, 0.65); }
   #gettingStarted aside {
     padding: 1em 2em; }
