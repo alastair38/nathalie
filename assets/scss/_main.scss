@@ -535,13 +535,6 @@ color: color("grey", "base");
   }
 }
 
-body.home {
-  background-size: cover !important;
-  @media #{$small-and-down} {
-    background-size: 1000px 501px !important;
-  }
-
-}
 
 .home #bottom {
   margin-bottom: 0px;
@@ -726,7 +719,7 @@ h6.card-sub-title {
 }
 
 #about-the-academy, #teaching, #classes {
-  opacity: 0;
+  opacity: 1;
   padding: 3em 0em;
   margin-bottom: 0;
   aside {

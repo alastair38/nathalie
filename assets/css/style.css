@@ -10984,12 +10984,6 @@ input.wpas-submit.btn, input.wpas-submit.btn-large {
   font-size: 1.35em;
   font-weight: 400; }
 
-body.home {
-  background-size: cover !important; }
-  @media only screen and (max-width: 600px) {
-    body.home {
-      background-size: 1000px 501px !important; } }
-
 .home #bottom {
   margin-bottom: 0px; }
 
@@ -11095,7 +11089,7 @@ h6.card-sub-title {
       font-size: 1.05em; }
 
 #about-the-academy, #teaching, #classes {
-  opacity: 0;
+  opacity: 1;
   padding: 3em 0em;
   margin-bottom: 0; }
   #about-the-academy aside, #teaching aside, #classes aside {
