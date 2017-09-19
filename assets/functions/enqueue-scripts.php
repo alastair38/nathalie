@@ -16,7 +16,7 @@ function site_scripts() {
 
     // Adding Slick slider script
   if(is_single()){
-  wp_enqueue_script( 'slick-js', 'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', array(), '', true );
+  wp_enqueue_script( 'slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', array(), '', true );
   wp_enqueue_script( 'slick-init', get_template_directory_uri() . '/assets/js/slick_init.js', array( 'jquery' ), '', true );
 }
     // Adding Cookie Consent scripts file in the footer
@@ -28,7 +28,7 @@ function site_scripts() {
 
     // Register Slick stylesheet
     if(is_single()){
-      wp_enqueue_style( 'slick-css', 'http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', array(), '', 'all' );
+      wp_enqueue_style( 'slick-css', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css', array(), '', 'all' );
 
       wp_enqueue_style( 'icons-css', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), '', 'all' );
     }

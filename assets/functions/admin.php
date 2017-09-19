@@ -162,7 +162,7 @@ add_action('wp_footer', function() {
     'telephone' => '+44' . get_field('company_phone', 'options'), //needs country code
     'url'       => get_home_url(),
     'description' => get_bloginfo('description'),
-    'image' => 'http://www.irishdancingclasses.co.uk/wp-content/themes/skeleton2/images/Peacock-Academy-Dance-School-Edinburgh-Logo.png'
+    'image' => get_field('company_logo', 'options')
     // Provide the company address
 
   );
@@ -237,6 +237,16 @@ if (have_rows('special_days', 'option')) {
 
   endwhile;
 }
+
+if (have_rows('social_media', 'option')) {
+  $schema['sameAs'] = array();
+  // For each instance...
+  while (have_rows('social_media', 'option')) : the_row();
+    // ...add it to the schema array
+    array_push($schema['sameAs'], get_sub_field('url'));
+  endwhile;
+}
+
 
 echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 });
