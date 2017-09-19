@@ -9,12 +9,12 @@
 		<section class="entry-content">
 			<p><?php _e("Try your search again.", "jointswp");?></p>
 		</section>
-		
+
 
 	<?php else: ?>
 
 		<header class="article-header">
-			<h1><?php _e("Sorry, No Results", "jointstheme"); ?></h1>
+			<h1><?php _e("We are regularly adding content, so please check back soon.", "jointstheme"); ?></h1>
 		</header>
 
 

@@ -1,6 +1,4 @@
 
-
-
 <div class="section white">
  <div class="col s12">
 	 <h2 class="header"><?php the_title(); ?></h2>

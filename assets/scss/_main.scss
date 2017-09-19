@@ -407,11 +407,18 @@ POSTS & CONTENT STYLES
 
 #cancellation_alert {
   position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  right: 10px;
+  left: 70%;
+  border-radius: 3px;
+  bottom: 10px;
   padding: 1rem;
-  z-index: 1000;
+  z-index: 100;
+  @media #{$small-and-down} {
+    right: 0;
+    left: 0;
+    border-radius: 0px;
+    bottom: 0;
+  }
 }
 
 #About, #Teaching, #Classes {
@@ -541,6 +548,10 @@ body.home {
   margin-bottom: 0px;
 }
 
+#strapline {
+  margin-bottom: 8rem;
+}
+
 
 footer.card-content {
   border-top: 1px solid rgba(160,160,160,.2);
@@ -552,12 +563,38 @@ article section {
   }
 }
 
+.single main {
+  margin: 0px;
+}
+
 .teacher .col.s12 {
   padding: 2rem;
   img {
     width: 200px;
   }
 }
+
+.page-template-page-calendar h3 {
+  display: inline-block;
+  border-bottom: 2px solid teal;
+  padding: .5rem 2rem;
+}
+
+#cancelled-classes, #holiday-dates {
+  border-radius: 3px;
+  font-size: 1.2rem;
+  margin: 1rem 15%;
+  span {
+    display: block;
+    &.alert-text {
+      padding-top: 1rem;
+    }
+    &.alert-details {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
 .single-title,
 .page-title {
 

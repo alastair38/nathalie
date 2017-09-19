@@ -3,33 +3,20 @@
 /*
 Template Name: Classes
 */
-
 get_header(); ?>
 
+<main>
+	<div class="row" role="main">
 
+		<?php if (have_posts()) : while (have_posts()) : the_post();
 
-	<main class="conainer">
-			<div class="row" role="main">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		get_template_part( 'parts/loop', 'page-classes' );
 
-				<?php
+		endwhile; endif;
 
-							get_template_part( 'parts/loop', 'page-classes' );
+		?>
 
-					?>
-
-					<?php //get_template_part( 'parts/loop', 'page-about' ); ?>
-
-
-				<?php endwhile; endif; ?>
-
-
-		</div> <!-- end #main -->
-
-			<?php // get_sidebar(); ?>
-
-	</main> <!-- end main -->
-
-
+	</div> <!-- end #mainrow -->
+</main> <!-- end main -->
 
 <?php get_footer(); ?>

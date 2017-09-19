@@ -6,30 +6,19 @@ Template Name: Teaching
 
 get_header(); ?>
 
+<main >
+	<div class="row" role="main">
 
+		<?php if (have_posts()) : while (have_posts()) : the_post();
 
-	<main class="cotainer">
-			<div class="row" role="main">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		get_template_part( 'parts/loop', 'page-about' );
 
-				<?php
+	 	endwhile; endif;
 
-							get_template_part( 'parts/loop', 'page-about' );
+		?>
 
-					?>
+	</div> <!-- end row -->
 
-					<?php //get_template_part( 'parts/loop', 'page-about' ); ?>
-
-
-				<?php endwhile; endif; ?>
-
-
-		</div> <!-- end #main -->
-
-			<?php // get_sidebar(); ?>
-
-	</main> <!-- end main -->
-
-
+</main> <!-- end main -->
 
 <?php get_footer(); ?>

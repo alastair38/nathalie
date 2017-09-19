@@ -17,6 +17,4 @@
 	<footer class="article-footer">
 	</footer> <!-- end article footer -->
 
-
-
 </article> <!-- end article -->

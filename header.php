@@ -25,7 +25,7 @@
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php wp_head(); ?>
 
@@ -42,13 +42,8 @@
   <body <?php body_class('white'); ?>>
 <?php }?>
 
+  <header class="header navbar-fixed valign-wrapper" role="banner">
 
-					<header class="header navbar-fixed valign-wrapper" role="banner">
+		<?php get_template_part( 'parts/nav', 'topbar' ); ?>
 
-						 <!-- This navs will be applied to the topbar, above all content
-							  To see additional nav styles, visit the /parts directory -->
-						 <?php get_template_part( 'parts/nav', 'topbar' ); ?>
-
-
-
-					</header> <!-- end .header -->
+	</header> <!-- end .header -->
