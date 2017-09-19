@@ -10985,10 +10985,10 @@ input.wpas-submit.btn, input.wpas-submit.btn-large {
   font-weight: 400; }
 
 body.home {
-  background: url("../images/dancing_BG.jpg") no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed; }
+  background-size: cover !important; }
+  @media only screen and (max-width: 600px) {
+    body.home {
+      background-size: 500px 275px !important; } }
 
 .home #bottom {
   margin-bottom: 0px; }

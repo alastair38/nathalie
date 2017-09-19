@@ -536,11 +536,10 @@ color: color("grey", "base");
 }
 
 body.home {
-
-  background: url('../images/dancing_BG.jpg') no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-size: cover !important;
+  @media #{$small-and-down} {
+    background-size: 500px 275px !important;
+  }
 
 }
 
