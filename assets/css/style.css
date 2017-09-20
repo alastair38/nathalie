@@ -11172,6 +11172,15 @@ body.home {
   border: 1px solid #cecece;
   padding: 10px; }
 
+.error404 {
+  min-height: 100vh; }
+
+article#content-not-found {
+  padding: 7rem 0; }
+  @media only screen and (max-width: 600px) {
+    article#content-not-found {
+      padding: 3rem 0; } }
+
 .home .article-header {
   font-weight: 100;
   padding: 3rem 0; }

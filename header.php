@@ -8,6 +8,9 @@
 		<!-- Force IE to use the latest rendering engine available -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Google site verification tag -->
+    <meta name="google-site-verification" content="MDxDCoHq0DTBgwUXoywukVIYRXQBzyNIDqcNTY2uVy8" />
+    
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
