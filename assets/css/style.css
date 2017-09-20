@@ -3295,7 +3295,12 @@ small {
   border-radius: 2px; }
   .card .card-title {
     font-size: 24px;
-    font-weight: 400; }
+    font-weight: 400;
+    margin: 2rem 0 1rem 0; }
+    @media only screen and (max-width: 600px) {
+      .card .card-title {
+        font-size: 1.25rem;
+        line-height: 1.5rem !important; } }
     .card .card-title.activator {
       cursor: pointer; }
   .card.small, .card.medium, .card.large {
@@ -3342,6 +3347,9 @@ small {
     .card .card-content p {
       margin: 0;
       color: inherit; }
+      @media only screen and (max-width: 600px) {
+        .card .card-content p {
+          padding: 0.5rem 0; } }
     .card .card-content .card-title {
       line-height: 48px; }
   .card .card-action {
@@ -10756,10 +10764,10 @@ h5, .h5 {
 
 .home h1 {
   font-size: 4.5rem; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 992px) {
     .home h1 {
       font-size: 2em; } }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
   .home h3 {
     font-size: 1.25em; } }
 
@@ -10988,7 +10996,7 @@ input.wpas-submit.btn, input.wpas-submit.btn-large {
   margin-bottom: 0px; }
 
 #strapline {
-  margin-bottom: 8rem; }
+  height: 75vh; }
 
 footer.card-content {
   border-top: 1px solid rgba(160, 160, 160, 0.2); }
@@ -11071,6 +11079,10 @@ h6.card-sub-title {
 body.home {
   background-size: cover !important;
   background-attachment: fixed !important; }
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    body.home {
+      background-size: 200% auto !important;
+      background-attachment: scroll !important; } }
   @media only screen and (max-width: 600px) {
     body.home {
       background-size: 350% auto !important;

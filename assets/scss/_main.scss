@@ -219,12 +219,12 @@ h5, .h5 {
 .home {
   h1 {
     font-size: 4.5rem;
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
       font-size: 2em;
     }
   }
   h3 {
-    @media #{$small-and-down} {
+    @media #{$medium-and-down} {
       font-size: 1.25em;
     }
   }
@@ -541,7 +541,7 @@ color: color("grey", "base");
 }
 
 #strapline {
-  margin-bottom: 8rem;
+  height: 75vh;
 }
 
 
@@ -692,6 +692,10 @@ h6.card-sub-title {
 body.home {
   background-size: cover !important;
   background-attachment: fixed !important;
+  @media #{$medium-only} {
+    background-size: 200% auto !important;
+    background-attachment: scroll !important;
+  }
   @media #{$small-and-down} {
     background-size: 350% auto !important;
     background-attachment: scroll !important;

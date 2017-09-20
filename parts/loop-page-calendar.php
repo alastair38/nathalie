@@ -106,7 +106,7 @@
 
 				 $class_name = get_sub_field('class_name', 'options');
 
-				echo '<p class="hip">' . get_sub_field('opening_days', 'options') . ': ' . implode(', ', $class_name) . ' [ ' . get_sub_field('start_time', 'options') . ' to ' . get_sub_field('finish_time', 'options') . ' ]</p>';
+				echo '<p>' . get_sub_field('opening_days', 'options') . ': ' . implode(', ', $class_name) . ' <i aria-hidden="true" class="mdi mdi-clock"></i> ' . get_sub_field('start_time', 'options') . ' to ' . get_sub_field('finish_time', 'options') . '</p>';
 
 				 endwhile;
 				 }

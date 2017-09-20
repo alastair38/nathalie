@@ -21,6 +21,12 @@
   .card-title {
     font-size: 24px;
     font-weight: 400;
+    margin: 2rem 0 1rem 0;
+    @media #{$small-and-down} {
+      font-size: 1.25rem;
+      line-height: 1.5rem !important;
+      
+    }
     &.activator {
       cursor: pointer;
     }
@@ -94,6 +100,9 @@
     p {
       margin: 0;
       color: inherit;
+      @media #{$small-and-down} {
+        padding: 0.5rem 0;
+      }
     }
     .card-title {
       line-height: 48px;
