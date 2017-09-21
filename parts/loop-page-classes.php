@@ -5,7 +5,7 @@
 	 <div class="parallax"><img src="<?php the_post_thumbnail_url('large'); ?>"></div>
 </div>
 
-<div class="section white">
+<div class="section white" itemscope itemtype="http://schema.org/WebPage">
  <div class="row container">
 
 	 <?php the_content();

@@ -162,6 +162,7 @@ add_action('wp_footer', function() {
     'telephone' => '+44' . get_field('company_phone', 'options'), //needs country code
     'url'       => get_home_url(),
     'description' => get_bloginfo('description'),
+		'priceRange' => "Not applicable",
     'image' => get_field('company_logo', 'options')
     // Provide the company address
 

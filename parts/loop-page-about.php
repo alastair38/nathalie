@@ -10,7 +10,7 @@
 
 <?php while ( have_rows('teacher_details') ) : the_row();?>
 
-<div class="teacher section white">
+<div itemscope itemtype="http://schema.org/WebPage" class="teacher section white">
 	<div class="row container">
     <div class="center">
       <h3 class="header"><?php the_sub_field('name'); ?></h3>

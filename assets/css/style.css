@@ -2052,6 +2052,14 @@ a {
   .valign-wrapper .valign {
     display: block; }
 
+/* IE9 hack to fix issue with fixed header */
+@media screen and (min-width: 0\0) {
+  .valign-wrapper {
+    display: block; } }
+/* IE 10+ hack to fix issue with fixed header */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .valign-wrapper {
+    display: block; } }
 ul {
   padding: 0; }
   ul li {
