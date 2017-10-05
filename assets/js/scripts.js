@@ -79,24 +79,30 @@ window.cookieconsent_options = {
    };
 
 
+   $('body').on('click','a[href^="#"]',function(event){
+       event.preventDefault();
+       var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
+       //change this number to create the additional off set
+       var customoffset = $("header").height();
+       $('html, body').animate({scrollTop:target_offset - customoffset}, 900);
+   }); //replacing below function to work better on Edge, Firefox
 
-
-   var headerHeight = $("header").height();
-
-
-     $('a[href^="#About"]').on('click',function (e) {
-         e.preventDefault();
-
-         var target = this.hash,
-         $target = $(target);
-
-         $('html, body').stop().animate({
-
-             'scrollTop': $target.offset().top - headerHeight
-
-         }, 1200, 'swing', function () {
-             window.location.hash = target ;
-         });
-     });
+  //  var headerHeight = $("header").height();
+   //
+   //
+  //    $('a[href^="#About"]').on('click',function (e) {
+  //        e.preventDefault();
+   //
+  //        var target = this.hash,
+  //        $target = $(target);
+   //
+  //        $('html, body').stop().animate({
+   //
+  //            'scrollTop': $target.offset().top - headerHeight
+   //
+  //        }, 1200, 'swing', function () {
+  //            window.location.hash = target ;
+  //        });
+  //    });
 
  });
