@@ -10788,7 +10788,7 @@ HEADER STYLES
   padding-left: 1rem; }
   .header a.brand-logo.thin.left:hover, .header a.brand-logo.thin.left:focus {
     color: #212121; }
-.header #logo {
+.header #logo, .header #mobilelogo {
   vertical-align: middle;
   margin-right: .5rem;
   height: 40px;
@@ -10796,7 +10796,7 @@ HEADER STYLES
   width: auto;
   animation: show 1000ms 1; }
   @media only screen and (max-width: 600px) {
-    .header #logo {
+    .header #logo, .header #mobilelogo {
       height: 24px;
       margin-top: 15px; } }
 .header .brand-logo {

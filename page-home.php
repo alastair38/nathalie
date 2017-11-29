@@ -48,7 +48,7 @@ get_header();
 		</div> <!-- end col s12 l8 -->
 
 		<div class="col s12 l4 pull-l<?php the_sub_field('pull_left'); ?>" >
-								<img src="<?php the_sub_field('section_image'); ?>">
+								<img src="<?php the_sub_field('section_image'); ?>" alt="Photograph representing the <?php the_sub_field('section_title'); ?> section of the website">
 		</div> <!-- end col s12 l4 -->
 
 		<div class="col s12">

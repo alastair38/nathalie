@@ -5,21 +5,13 @@
 	 	<div class="nav-wrapper "><img id="logo" class="hide-on-med-and-down brand-logo center"
 			<?php $logo_image = get_theme_mod( 'tcx_logo_image' );
 			if ($logo_image){?>
-			src="<?php echo $logo_image;?>"
+			src="<?php echo $logo_image;?>" alt="<?php bloginfo('name'); ?> logo"
 			<?php
 			} else {?>
-			src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
+			src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="<?php bloginfo('name'); ?> logo"
 			<?php }?>
 			/>
-			<img id="logo" class="hide brand-logo left"
- 			<?php $logo_image = get_theme_mod( 'tcx_logo_image' );
- 			if ($logo_image){?>
- 			src="<?php echo $logo_image;?>"
- 			<?php
- 			} else {?>
- 			src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg"
- 			<?php }?>
- 			/>
+
 			<a href="<?php bloginfo('url'); ?>" class="brand-logo thin center hide-on-large-only"><?php bloginfo('name'); ?></a>
 			<a href="<?php bloginfo('url'); ?>" class="brand-logo thin left hide-on-med-and-down"><?php bloginfo('name'); ?></a>
 
@@ -28,18 +20,18 @@
 			</span>
 
 			<ul id="slide-out" class="side-nav">
-	 			<div class="center">
-	 				<img id="logo"
+	 			<li class="center">
+	 				<img id="mobilelogo"
 	 				<?php
 	 				$logo_image = get_theme_mod( 'tcx_logo_image' );
 	 				if ($logo_image){?>
-	 				src="<?php echo $logo_image;?>" alt=""
+	 				src="<?php echo $logo_image;?>" alt="<?php bloginfo('name'); ?> logo"
 	 				<?php
 	 				} else {?>
 	 				src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt=""
 	 				<?php }?>
 	 				/>
-	      </div>
+	      </li>
 
 				<?php if(is_front_page()){?>
 				<li class="active">
