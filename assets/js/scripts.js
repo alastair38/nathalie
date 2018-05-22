@@ -53,11 +53,42 @@ var options = [
 Materialize.scrollFire(options);
 
 
-window.cookieconsent_options = {
-       learnMore: 'More info',
-       theme: 'dark-bottom',
-       link: document.location.origin + '/privacy'
-   };
+window.addEventListener("load", function(){
+var p;
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "position": "bottom-right",
+  "type": "opt-in",
+  "content": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Do not allow!",
+    "href": "https://irishdancingclasses.co.uk/privacy"
+  },
+  onRevokeChoice: function() {
+    console.log('<em>onRevokeChoice()</em> called');
+  },
+}, function (popup) {
+  p = popup;
+}, function (err) {
+  console.error(err);
+})
+var revoke = document.getElementById('btn-revokeChoice');
+if(revoke) {
+  revoke.onclick = function (e) {
+    console.log("Calling <em>revokeChoice()</em>");
+    p.revokeChoice();
+
+  };
+}
+
+});
 
 
   //  var markers = document.querySelectorAll('input[type="radio"]'),

@@ -151,6 +151,16 @@ if (function_exists('acf_add_options_page')) {
   ));
 }
 
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_page(array(
+    'page_title' => 'Privacy',
+    'menu_title' => 'Privacy',
+    'menu_slug'  => 'privacy-details',
+    'capability' => 'edit_posts',
+    'redirect'   => false
+  ));
+}
+
 add_action('wp_footer', function() {
   $schema = array(
     // Tell search engines that this is structured data
