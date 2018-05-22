@@ -64,11 +64,15 @@ window.cookieconsent.initialise({
       "background": "#14a7d0"
     }
   },
+  "cookie.domain": "www.irishdancingclasses.co.uk",
   "position": "bottom-right",
   "type": "opt-in",
   "content": {
     "message": "This website uses cookies to ensure you get the best experience on our website.",
     "dismiss": "Do not allow!",
+
+  "allow": 'Allow cookies',
+  "deny": 'Decline',
     "href": "https://irishdancingclasses.co.uk/privacy"
   },
   onRevokeChoice: function() {
