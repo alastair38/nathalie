@@ -1,0 +1,645 @@
+{
+    "key": "group_5afd4fb637f93",
+    "title": "Privacy Policy Page Layout",
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "privacy-details"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_5afd518e5517b",
+            "label": "Introductory Text",
+            "name": "privacy_general",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "This privacy policy is for {{ ORGANISATION NAME }}. We may change this Policy from time to time so please check this page occasionally to ensure that you’re happy with any changes. By using our website, you’re agreeing to be bound by this Policy. \r\n\r\nAny questions regarding this Policy and our privacy practices should be sent by email to {{ ENTER EMAIL \/ OTHER CONTACT OPTIONS }}.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5afd54dfaa390",
+            "label": "What type of information is collected from you?",
+            "name": "information_collected",
+            "type": "group",
+            "instructions": "You can build and personalise your privacy policy page by answering the following questions.  Answering 'Yes' or 'No' to a question will enable different tabs and content boxes with related text that you can edit.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5afd54fcaa391",
+                    "label": "Does your site collect any user information?",
+                    "name": "no_information_collected",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5afd63a386dc0",
+                    "label": "Text to show if your site does not collect user info",
+                    "name": "no_information_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "{{ ORGANISATION NAME }} does not collect any personal information from site visitors.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd6595a32fc",
+                    "label": "User Information Section Intro",
+                    "name": "information_text_intro",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "{{ ORGANISATION NAME }} only collects personal information if you explicitly consent to any of the following:",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd6317aa392",
+                    "label": "We collect information from registered users",
+                    "name": "user_information_collected",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5afd640486dc1",
+                    "label": "Text to show if your site collects info from registered users",
+                    "name": "user_information_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Sign-up to a user account",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd6360ab1a6",
+                    "label": "We collect information from mailing list subscribers",
+                    "name": "subscriber_information_collected",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5afd643486dc2",
+                    "label": "Text to show if your site collects info from mailing list subscribers",
+                    "name": "mailing_list_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Join a mailing list administered by {{ ORGANISATION NAME  }}.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd7c886f7b4",
+                    "label": "Information Access",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5afd6c62bea1a",
+                    "label": "Who has access to your information?",
+                    "name": "privacy_access",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "We will not sell or rent your information to third parties. We will not share your information with third parties for marketing purposes.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd6e2b82862",
+                    "label": "How is your information used?",
+                    "name": "information_use",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5afd6eae0d3aa",
+                            "label": "Registered User Information",
+                            "name": "user_information_use",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5afd6317aa392",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "By default, {{ ORGANISATION NAME URL }} retains only your email address upon creating a user account.  You can consent to your name also being retained for the purposes of personalising your website experience.  Your email address will only be used to identify your account upon login and to provide you with any important updates about your account",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5afd6f0e0d3ab",
+                            "label": "Subscriber Information",
+                            "name": "subscriber_information_use",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5afd6360ab1a6",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "{{ ORGANISATION NAME }} maintains email lists to keep subscribers informed about news, events and publications related to our work. Users join our mailing lists voluntarily via email and by signing up through a form on our website. We retain only your email address and name, if the user consents, in order to deliver notifications you have consented to and to provide you with any important updates about your subscription.",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5afd6fcbeaec7",
+                    "label": "Accessing and updating your information",
+                    "name": "access_and_updating",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "The accuracy of your information is important to us. If you are a registered user you can log in to your account and visit your profile page in order to update any of your personal information. You can also remove your account in its entirety by using the 'Delete Account' button. You can also update any information we hold about your by emailing us at {{ CONTACT EMAIL }}.\r\n\r\nIf you wish to see what information {{ ORGANISATION NAME }} holds about you, please submit a request by email to {{ CONTACT EMAIL }} (Note on any charges to process these requests + alternative means of communication) \r\n\r\nIt is {{ ORGANISATION NAME }}’s policy to ensure that all Information Access Requests are acknowledged in 5 working days.  \r\n \r\nIndividuals will be required to provide proof of identity and residence before information may be disclosed. This is to prevent unauthorised disclosure to third parties. \r\n\r\nWhere a request is made by an agent on behalf of an individual, a request will only be fulfilled where the agent can provide proof of authority to act on the individual’s behalf. \r\n\r\nAll requests will be dealt with within the timeframe set by the Information Commissioner (40 calendar days from proof of identity).",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 20,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd812632057",
+                    "label": "Preferences",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5afd753c373eb",
+                    "label": "Communication Choices",
+                    "name": "communication_choices",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd54fcaa391",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "You have a choice about whether or not you wish to receive information from us.  We will never send you unsolicited email, but we also understand that you may decide you no longer wish to receive certain communications from us.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd765d373ec",
+                    "label": "To change your mailing list preferences",
+                    "name": "mailling_list_preferences",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6360ab1a6",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "To unsubscribe from a mailing list you have previously subscribed to, you can click on the 'Unsubscribe' link that is found at the bottom of all emails sent to a mailing list.  Alternatively, contact SITE_EMAIL with details of the mailing list you would like to unsubscribe from.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd76a7373ed",
+                    "label": "To change your account communication preferences",
+                    "name": "account_communication_preferences",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5afd6317aa392",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "If on creating an account a communication choice is provided, note here how to update it",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd7cdf6f7b6",
+                    "label": "Security",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5afd7800f3a42",
+                    "label": "How we protect your information",
+                    "name": "how_we_protect_your_information",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "{{ SITE_URL }} uses Secure Sockets Layer (SSL) security technology to establish an encrypted link between our web server and your web browser. This link ensures that all data passed between the web server and browser remains private and integral.  \r\n\r\nWhen you are on a secure page, a lock icon will appear in the browser address bar. \r\n\r\nAny of your information you provide us with is stored in a secure database. At no point will be ask you for sensitive information (such as credit or debit card details).",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd7cf66f7b7",
+                    "label": "Cookies + Links",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5afd7b28ef9ce",
+                    "label": "Use of Cookies",
+                    "name": "use_of_cookies",
+                    "type": "textarea",
+                    "instructions": "If your website does not set any cookies, simply delete the default text and leave the cookie page link blank",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Cookies are small pieces of information sent by an organisation to your computer and stored on your hard drive to allow that website to recognise you when you visit. Cookies collect statistical data about your browsing actions and patterns and do not identify you as an individual. \r\n\r\nVisit our cookies policy page for more information.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5afd7b6eef9d0",
+                    "label": "Cookies Policy Page Link",
+                    "name": "cookies_page_link",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 1,
+                    "allow_archives": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5afd7bb05d43b",
+                    "label": "Links to other sites",
+                    "name": "links_to_other_sites",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Our website may contain links to other websites run by other organisations. This privacy policy applies only to {{ SITE URL }}. We are not responsible for the privacy policies of these sites. \r\n\r\nIn addition, if you linked to our website from a third party site, are not responsible for the privacy policies of the third party site and recommend you check the policy of that site.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
+        }
+    ],
+    "modified": 1551702354
+}

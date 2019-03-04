@@ -11197,6 +11197,9 @@ img.hide-on-med-and-up {
 /*********************
 IMAGE GALLERY STYLES
 *********************/
+.gallery-wrapper {
+  padding-bottom: 2rem; }
+
 /*********************
 PAGE NAVI STYLES
 *********************/
