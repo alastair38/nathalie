@@ -137,9 +137,6 @@ $urls = array_diff( $urls, array( $emoji_svg_url ) );
 return $urls;
 }
 
-add_filter('acf/settings/google_api_key', function () {
-    return 'AIzaSyB1ogka67k0TWwlmXEcsUqLEeSZTBkgJyA';
-});
 
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page(array(
@@ -273,3 +270,10 @@ function my_admin_style() {
     }
   </style>';
 }
+
+function my_acf_init() {
+	$api_key = get_field('api_key', 'option');
+	acf_update_setting('google_api_key', $api_key);
+}
+
+add_action('acf/init', 'my_acf_init');
