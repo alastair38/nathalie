@@ -1,4 +1,5 @@
 <?php
+$api_key = get_field('api_key', 'options');
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
@@ -96,7 +97,7 @@
 				echo '<div><h6 class="card-title">' . $name . '<a href="#' . $name_slug . '"><i class="mdi mdi-information-outline" style="font-size: 1rem;"></i></a></h6>';
 				echo '<div id="' . $name_slug . '" class="modal"><div class="modal-content center"><p><span>'. $street . '</span>, <span>' . $locality . '</span>, <span>' . $zip . '</span></p><br />';
 				echo '<img class="responsive-img" src="https://maps.googleapis.com/maps/api/staticmap?center=' . $map['lat'] . ',' . $map['lng'] . '&zoom=14&size=600x300&scale2
-				&markers=color:0x01a89e%7Csize:mid%7C' . $map['lat'] . ',' . $map['lng'] . '&key=AIzaSyB1ogka67k0TWwlmXEcsUqLEeSZTBkgJyA">';
+				&markers=color:0x01a89e%7Csize:mid%7C' . $map['lat'] . ',' . $map['lng'] . '&key=' . $api_key . '">';
 				echo ' </div><div class="modal-footer teal"><a href="#schedule" class="modal-action white modal-close waves-effect waves-green btn-flat">Close</a></div></div></div>';
 
 				 if (have_rows('opening_times', 'options')) {
@@ -130,7 +131,7 @@
 					 $place = (implode ('+', $place));
 					echo '<div class="col s12"><div itemscope itemtype="http://schema.org/Event" class="card-content"><p><strong itemprop="name">' . $feis_name . '</strong></p><p itemprop="startDate"><i class="mdi mdi-calendar"></i> ' . $feis_date->format('l, j F Y') . '</p><p itemprop="location" itemscope itemtype="http://schema.org/Place"><i class="mdi mdi-map-marker"></i><span itemprop="name">' . $location_details[0] . '</span>, <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">' . $location_details[1] . ', ' . $location_details[2] . '</span></span></p><br />';
 					echo '<a href="https://www.google.co.uk/maps/place/' . $place . '/@' . $feis_location['lat'] . ',' . $feis_location['lng'] . ',17z" target="_blank" title="View on Google Maps"><img class="responsive-img circle" src="https://maps.googleapis.com/maps/api/staticmap?center=' . $feis_location['lat'] . ',' . $feis_location['lng'] . '&zoom=15&size=300x300&scale2
-				&markers=color:0x01a89e%7Csize:mid%7C' . $feis_location['lat'] . ',' . $feis_location['lng'] . '&key=AIzaSyB1ogka67k0TWwlmXEcsUqLEeSZTBkgJyA"></a>';
+				&markers=color:0x01a89e%7Csize:mid%7C' . $feis_location['lat'] . ',' . $feis_location['lng'] . '&key=' . $api_key . '"></a>';
 
 					echo '</div></div>';
 					endwhile;
