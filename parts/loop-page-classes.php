@@ -11,6 +11,8 @@
 	 <?php the_content();
 
 		if (have_rows('address_details', 'options')) { //parent repeater
+		
+		$api_key = get_field('api_key', 'options');
 
 		while (have_rows('address_details', 'options')) : the_row();
 
@@ -25,7 +27,7 @@
 		$place = (implode ('+', $place));
 		echo '<div class="col s12 l6"><div class="card"><div class="card-image">';
 		echo '<a href="https://www.google.co.uk/maps/place/' . $place . '/@' . $map['lat'] . ',' . $map['lng'] . ',17z" target="_blank" title="View on Google Maps"><img class="responsive-img" src="https://maps.googleapis.com/maps/api/staticmap?center=' . $map['lat'] . ',' . $map['lng'] . '&zoom=14&size=640x350&scale2
-&markers=color:0x01a89e%7Csize:mid%7C' . $map['lat'] . ',' . $map['lng'] . '&key=AIzaSyB1ogka67k0TWwlmXEcsUqLEeSZTBkgJyA" ></a>';?>
+&markers=color:0x01a89e%7Csize:mid%7C' . $map['lat'] . ',' . $map['lng'] . '&key=' . $api_key . '" ></a>';?>
 
 			</div>
 			<div class="card-content">
