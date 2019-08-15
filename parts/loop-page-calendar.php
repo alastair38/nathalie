@@ -17,14 +17,16 @@ $api_key = get_field('api_key', 'options');
 
 			<div class="row">
 				<div class="card-content grey lighten-5 col s12">
-
+				
 				<?php
+				the_content();
+					
 				if (have_rows('cancelled_classes', 'options')) { //parent repeater
 					$today = date('F j, Y');
 					$today = strtotime($today);
 
 					echo '<div id="cancelled-classes" class="materialize-red light lighten-2 white-text">';
-
+					echo '<span class="alert-text">' . get_field('cancelled_classes_text', 'options') . '</span>';
 					// For each row...
 					while (have_rows('cancelled_classes', 'options')) : the_row();
 
@@ -34,7 +36,6 @@ $api_key = get_field('api_key', 'options');
 					$date_x = strtotime($date);
 
 					if($date_x >= $today) {
-					echo '<span class="alert-text">' . get_field('cancelled_classes_text', 'options') . '</span>';
 					if($locale) {
 						echo '<span class="alert-details"><strong>' . $locale;
 						if($name) {
