@@ -25,6 +25,15 @@
 			<p class="source-org copyright">
 				<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a> &copy; <?php echo date("Y");?>
 			</p>
+			<?php
+			$affiliate_link = get_field('affiliate_url', 'options');
+			$affiliate_logo = get_field('affiliate_logo', 'options');
+
+			if($affiliate_link) {
+				echo '<a href="' . $affiliate_link . '" alt="' . $affiliate_logo['alt'] . '"><img src="' . $affiliate_logo['sizes']['medium'] . '" /></a>';
+			}
+
+			 ?>
 		</div>
 
 	</div> <!-- end #inner-footer -->

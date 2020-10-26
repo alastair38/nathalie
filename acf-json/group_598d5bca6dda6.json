@@ -1,23 +1,6 @@
 {
     "key": "group_598d5bca6dda6",
     "title": "Company Data",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "academy-details"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
-    "description": "",
     "fields": [
         {
             "key": "field_59bf959effd3a",
@@ -158,9 +141,7 @@
                 "Person": "Person",
                 "Restaurant": "Restaurant"
             },
-            "default_value": [
-                "LocalBusiness"
-            ],
+            "default_value": "LocalBusiness",
             "allow_null": 0,
             "multiple": 0,
             "ui": 1,
@@ -396,7 +377,7 @@
                                 "Saturday": "Saturday",
                                 "Sunday": "Sunday"
                             },
-                            "default_value": [],
+                            "default_value": false,
                             "allow_null": 1,
                             "multiple": 0,
                             "ui": 0,
@@ -724,6 +705,63 @@
             ]
         },
         {
+            "key": "field_5f96dca5dd644",
+            "label": "Affiliate Link",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f96dcb5dd645",
+            "label": "Affiliate URL",
+            "name": "affiliate_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f96dcc2dd646",
+            "label": "Affiliate Logo",
+            "name": "affiliate_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_598d6cb0f5324",
             "label": "Social Media Accounts",
             "name": "",
@@ -777,7 +815,7 @@
                         "Instagram": "Instagram",
                         "Twitter": "Twitter"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
@@ -804,5 +842,22 @@
             ]
         }
     ],
-    "modified": 1551702352
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "academy-details"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1603722751
 }

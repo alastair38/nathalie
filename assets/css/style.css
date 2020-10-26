@@ -10999,7 +10999,7 @@ footer.card-content {
   #cancelled-classes span, #holiday-dates span {
     display: block; }
     #cancelled-classes span.alert-text, #holiday-dates span.alert-text {
-      padding-top: 1rem; }
+      padding: 1rem; }
     #cancelled-classes span.alert-details, #holiday-dates span.alert-details {
       padding-bottom: 1rem; }
 
